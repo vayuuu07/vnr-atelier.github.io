@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VNR Atelier — Creative Web & Brand Studio</title>
+  <meta name="description" content="VNR Atelier — Website design, logo design, and branding services." />
+  <link rel="icon" href="data:," />
+
+  <!-- Simple, modern single-file site (ready for GitHub Pages) -->
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px; --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071025 0%, #071225 60%); color:#e6eef8; -webkit-font-smoothing:antialiased;
+      padding:24px; display:flex; justify-content:center;
+    }
+    .wrap{width:100%; max-width:var(--maxw)}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:white;box-shadow:0 6px 20px rgba(124,58,237,0.18)}
+    h1{font-size:28px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,rgba(124,58,237,0.06),transparent);border-radius:var(--radius);padding:28px;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
+    .hero .cta{margin-top:14px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;text-decoration:none;font-weight:600}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;color:var(--muted);border-radius:10px}
+
+    /* Cards */
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .services{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .service{flex:1 1 160px;min-width:160px;padding:14px;border-radius:10px;background:var(--glass)}
+    .service h3{margin:8px 0 6px;font-size:15px}
+    .service p{margin:0;font-size:13px;color:var(--muted)}
+
+    /* Portfolio */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+    .thumb{height:140px;border-radius:10px;background:linear-gradient(135deg,#0b1220,#0e1530);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+
+    /* About & Contact */
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:18px}
+    .contact form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:110px;resize:vertical}
+    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:920px){
+      .hero,.two-col{grid-template-columns:1fr}
+      .hero{padding:18px}
+      .brand h1{font-size:20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">VA</div>
+        <div>
+          <h1>VNR Atelier</h1>
+          <p class="lead">Creative studio — websites · logos · brand identity</p>
+        </div>
+      </div>
+      <nav>
+        <a class="secondary" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero card" id="home">
+      <div>
+        <h2 style="margin:0 0 8px">We build clean, modern websites & brands</h2>
+        <p class="lead">From logo concepts to full website builds — pixel-perfect, responsive, and ready for business.</p>
+        <div class="services">
+          <div class="service">
+            <strong>Website Design</strong>
+            <p>Responsive sites, GitHub Pages deployment, custom layouts.</p>
+          </div>
+          <div class="service">
+            <strong>Logo & Identity</strong>
+            <p>Memorable logos, color systems, and brand guidelines.</p>
+          </div>
+          <div class="service">
+            <strong>Brand Assets</strong>
+            <p>Social banners, posters, and presentation templates.</p>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#contact" role="button">Get Started</a>
+          <a class="secondary" href="#portfolio" style="margin-left:8px">See Portfolio</a>
+        </div>
+      </div>
+
+      <aside>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="card" style="padding:14px">
+            <h3 style="margin:0 0 6px">Quick Facts</h3>
+            <p class="lead" style="margin:0">Fast delivery · Responsive · Clean code</p>
+          </div>
+
+          <div class="card" style="padding:14px;display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+            <strong>Starting at</strong>
+            <div style="font-size:18px;font-weight:700">₹3,000</div>
+            <small class="lead">Contact for custom quotes</small>
+            <a class="btn" href="#contact" style="margin-top:8px">Request Quote</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="portfolio" class="card" style="margin-top:18px">
+      <h3 style="margin:0">Portfolio</h3>
+      <p class="lead" style="margin-top:6px">Selected mockups & quick projects</p>
+      <div class="grid" aria-hidden="false">
+        <div class="thumb">Branding — Cafe Logo</div>
+        <div class="thumb">Portfolio Site — Photographer</div>
+        <div class="thumb">E‑Commerce Landing</div>
+        <div class="thumb">Poster & Social Pack</div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="card">
+        <h3 style="margin:0">About VNR Atelier</h3>
+        <p class="lead" style="margin-top:8px">VNR Atelier is a small creative studio focused on building beautiful, accessible brands and websites. We keep designs simple, mobile-first, and practicable for small businesses and creators.</p>
+
+        <h4 style="margin-top:12px">Services</h4>
+        <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+          <li>Custom website builds (HTML/CSS/JS)</li>
+          <li>Logo & identity packages</li>
+          <li>Social graphics & print assets</li>
+        </ul>
+      </div>
+
+      <aside class="card contact" id="contact">
+        <h3 style="margin:0">Contact</h3>
+        <p class="lead" style="margin-top:6px">Tell us about your project — we'll reply within 1–2 business days.</p>
+
+        <!-- Simple contact form that creates a mailto link (works without server) -->
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+          <input id="name" placeholder="Your name" required />
+          <input id="email" placeholder="Your email" type="email" required />
+          <input id="subject" placeholder="Subject" />
+          <textarea id="message" placeholder="Project details..." required></textarea>
+          <button class="btn" type="submit">Send Email</button>
+        </form>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:13px">Or reach out on <strong>Instagram</strong> or <strong>WhatsApp</strong></div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> VNR Atelier — Built with ❤️ · Hosted on GitHub Pages</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim() || 'New project from website';
+      const message = document.getElementById('message').value.trim();
+
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+      // opens user's email client with prefilled message
+      window.location.href = `mailto:hello@vnratelier.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
